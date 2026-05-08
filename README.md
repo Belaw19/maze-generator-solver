@@ -24,6 +24,15 @@ An invisible “mouse” visits cells and randomly removes walls between unvisit
 
 When the mouse reaches a dead end, it backtracks using the stack until it finds another possible path.
 
+## Assignment Requirements Covered
+
+- Rectangular maze generation
+- Random path generation
+- Stack-based DFS algorithm
+- Maze traversal and solving
+- Dynamic graphical visualization
+- Backtracking solver
+
 ## Solver
 
 The maze solver also uses backtracking to find a path from start to end.
@@ -38,11 +47,3 @@ Install pygame:
 ```bash
 pip install pygame
 
-## Assignment Requirements Covered
-
-- Rectangular maze generation
-- Random path generation
-- Stack-based DFS algorithm
-- Maze traversal and solving
-- Dynamic graphical visualization
-- Backtracking solver
