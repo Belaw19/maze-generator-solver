@@ -37,3 +37,12 @@ Install pygame:
 
 ```bash
 pip install pygame
+
+## Assignment Requirements Covered
+
+- Rectangular maze generation
+- Random path generation
+- Stack-based DFS algorithm
+- Maze traversal and solving
+- Dynamic graphical visualization
+- Backtracking solver
