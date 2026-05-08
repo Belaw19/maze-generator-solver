@@ -40,9 +40,18 @@ The maze solver also uses backtracking to find a path from start to end.
 - Red cells = current solution path
 - Blue cells = dead ends
 
-## Installation
+## Loom Video Demonstration
 
-Install pygame:
+Watch the full project demonstration here:
+
+[Watch Loom Video](https://www.loom.com/share/eb3891fb59174b228cec9bb452152709)
+
+The video demonstrates:
+- Maze generation process
+- Dynamic wall removal
+- Maze solving algorithm
+- Backtracking process
+- Final solved maze visualization
 
 ## NAME :- KIDUS GIRMA
 ## ID :- UGR/7576/16
