@@ -44,6 +44,7 @@ The maze solver also uses backtracking to find a path from start to end.
 
 Install pygame:
 
-```bash
-pip install pygame
+## NAME :- KIDUS GIRMA
+## ID :- UGR/7576/16
+# SECTION :- 1
 
