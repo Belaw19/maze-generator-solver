@@ -2,9 +2,6 @@ import pygame
 import random
 import sys
 
-# =========================
-# SETTINGS
-# =========================
 ROWS = 20
 COLS = 20
 CELL_SIZE = 30
@@ -14,20 +11,15 @@ HEIGHT = ROWS * CELL_SIZE
 
 FPS = 60
 
-# =========================
-# COLORS
-# =========================
-WHITE = (255, 255, 255)      # Background
-BLACK = (0, 0, 0)            # Maze walls
+WHITE = (255, 255, 255)      
+BLACK = (0, 0, 0)            
 
-RED = (255, 0, 0)            # Solving path
-BLUE = (0, 100, 255)         # Dead ends
-GREEN = (0, 200, 0)          # Current mouse
-      # Visited cells
+RED = (255, 0, 0)            
+BLUE = (0, 100, 255)         
+GREEN = (0, 200, 0)          
+      
 
-# =========================
-# PYGAME INIT
-# =========================
+
 pygame.init()
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -35,9 +27,7 @@ pygame.display.set_caption("Maze Generator and Solver")
 
 clock = pygame.time.Clock()
 
-# =========================
-# CELL CLASS
-# =========================
+
 class Cell:
     def __init__(self, row, col):
         self.row = row
@@ -85,9 +75,7 @@ class Cell:
             pygame.draw.line(screen, BLACK, (x, y + CELL_SIZE),
                              (x, y), 2)
 
-# =========================
-# GRID
-# =========================
+
 grid = [[Cell(r, c) for c in range(COLS)] for r in range(ROWS)]
 
 def get_cell(row, col):
@@ -95,9 +83,7 @@ def get_cell(row, col):
         return grid[row][col]
     return None
 
-# =========================
-# REMOVE WALLS
-# =========================
+
 def remove_walls(current, next_cell):
     dx = current.col - next_cell.col
     dy = current.row - next_cell.row
@@ -118,9 +104,7 @@ def remove_walls(current, next_cell):
         current.walls["bottom"] = False
         next_cell.walls["top"] = False
 
-# =========================
-# MAZE GENERATION
-# =========================
+
 def generate_maze():
     stack = []
 
@@ -183,18 +167,14 @@ def generate_maze():
         pygame.display.update()
         clock.tick(FPS)
 
-# =========================
-# RESET SOLVER
-# =========================
+
 def reset_solver():
     for row in grid:
         for cell in row:
             cell.solved = False
             cell.dead_end = False
 
-# =========================
-# SOLVE MAZE
-# =========================
+
 def solve_maze(start, end):
     stack = []
     visited = set()
@@ -277,9 +257,7 @@ def solve_maze(start, end):
 
     return False
 
-# =========================
-# MAIN
-# =========================
+
 def main():
     generate_maze()
 
